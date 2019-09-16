@@ -1,0 +1,20 @@
+/*********************************
+5. Home
+*********************************/
+
+.home_about
+{
+	height: 548px;
+	padding-bottom: 134px;
+}
+.home_text_about
+{
+	font-size: 60px;
+	color: #FFFFFF;
+	font-weight: 700;
+	line-height: 1.2;
+}
+.home_text_about span
+{
+	color: #D82C76;
+}

@@ -1,0 +1,113 @@
+{% extends "layout.html" %}
+{%block content %}
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/about.css')}}">
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/schedule.css')}}">
+<script src="{{ url_for('static', filename='js/about.js')}}"></script>
+
+	<!-- Home -->
+
+
+	<div class="home d-flex flex-column align-items-start justify-content-end">
+		<div class="parallax_background parallax-window" data-parallax="scroll" data-image-src="{{ url_for('static', filename='images/Fem4.png')}}" data-speed="0.8"></div>
+		<div class="container">
+			<div class="row">
+				<div class="col text-center">
+					<div class="home_text">L'équipe <span>féminine</span></div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- About -->
+
+	<div class="about">
+		<div class="container">
+			<div class="row">
+
+				<!-- About Image -->
+				<div class="col-xl-6 order-xl-1 order-2">
+					<div class="about_image">
+						<div class="background_image" style="background-image:url(static/images/Fem2.png)"></div>
+						<img src="images/about_1.jpg" alt="">
+					</div>
+				</div>
+
+				<!-- About content -->
+				<div class="col-xl-6 order-xl-2 order-1">
+					<div class="about_content">
+						<div class="about_content_container">
+							<div class="section_title_container">
+								<div class="section_title"><h1>about PARC</h1></div>
+							</div>
+							<div class="about_title">mission&vision</div>
+							<div class="about_subtitle">Resoect for the game</div>
+							<div class="about_text">
+								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam accumsan dolor id enim lacinia, sed feugiat ex suscipit. Nunc molestie malesuada pellentesque. Quisque mattis ante ut nisl tristique ornare. Aenean interdum dictum augue, quis egestas erat lacinia in. Proin dictum commodo nulla ut mattis. Pellentesque vel commodo nisi. Donec eget purus eget ex efficitur tristique. Nulla ut mollis justo.</p>
+								<p>Nam turpis nulla, ullamcorper volutpat faucibus ut, facilisis in elit. Nam blandit diam vel felis porta, vitae congue nulla feugiat. Vestibulum rhoncus odio elit, at aliquet sem posuere vel.</p>
+							</div>
+
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</div>
+
+
+			<!-- Schedule -->
+
+			<div class="schedule">
+				<div class="container">
+					<div class="row">
+						<div class="col">
+							<div class="section_title_container">
+								<div class="section_title"><h1>Les entrainements</h1></div>
+								<div class="section_subtitle">pour l'équipe féminine</div>
+							</div>
+						</div>
+					</div>
+					<div class="row schedule_row">
+
+						<!-- Schedule List -->
+						<div class="col-lg-4">
+							<div class="schedule_container schedule_a">
+								<div class="schedule_title_bar d-flex flex-row align-items-center justify-content-between">
+									<div class="schedule_team_name">Féminines</div>
+									<div class="schedule_icon"><img src="images/icon_5.svg" alt=""></div>
+									<div class="schedule_location">Stade du goh lanno</div>
+								</div>
+								<div class="schedule_list">
+									<ul>
+										<li class="d-flex flex-row align-items-start justify-content-start">
+											<div>jeudi </div>
+											<div class="ml-auto">20h - 22h</div>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+
+
+
+
+					</div>
+				</div>
+			</div>
+
+
+	<!-- CTA -->
+
+	<div class="cta">
+		<div class="container">
+			<div class="row">
+				<div class="col">
+					<div class="cta_content d-flex flex-md-row flex-column align-items-md-center align-items-start justify-content-start">
+						<div class="cta_text">Envie de faire partie <span>de l'équipe ?</span></div>
+						<div class="cta_button button ml-md-auto"><a href="#">Contactez nous</a></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+{% endblock content %}

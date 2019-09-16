@@ -1,0 +1,84 @@
+
+
+/*********************************
+6. Schedule
+*********************************/
+
+.schedule
+{
+	background: #FFFFFF;
+	padding-top: 100px;
+	padding-bottom: 20px;
+}
+.schedule_row
+{
+	margin-top: 98px;
+}
+.schedule_container
+{
+	margin-bottom: 30px;
+}
+.schedule_title_bar
+{
+	height: 80px;
+	background: #004376;
+	padding-left: 34px;
+	padding-right: 35px;
+}
+.schedule_icon
+{
+	width: 41px;
+	height: 41px;
+}
+.schedule_icon img
+{
+	max-height: 100%;
+}
+.schedule_team_name,
+.schedule_location
+{
+	font-size: 16px;
+	font-weight: 700;
+	color: #D82C76;
+}
+.schedule_location
+{
+	text-transform: uppercase;
+}
+.schedule_list
+{
+	padding-left: 54px;
+	padding-top: 33px;
+	padding-right: 64px;
+	padding-bottom: 37px;
+}
+.schedule_a
+{
+	border: solid 1px #dcdce1;
+}
+.schedule_a .schedule_list
+{
+	background: #dddfe2;
+}
+.schedule_b .schedule_list
+{
+	background: #D82C76;
+}
+.schedule_list ul li
+{
+	font-size: 14px;
+	font-weight: 700;
+	text-transform: uppercase;
+}
+.schedule_a .schedule_list ul li
+{
+	color: #969696;
+}
+.schedule_b .schedule_list ul li
+{
+	color: #004376;
+}
+.schedule_list ul li:not(:last-of-type)
+{
+	margin-bottom: 23px;
+}

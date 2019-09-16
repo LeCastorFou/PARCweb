@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="description" content="Sports Team template project">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/bootstrap-4.1.2/bootstrap.min.css')}}">
+<link href="{{ url_for('static', filename='plugins/font-awesome-4.7.0/css/font-awesome.min.css')}}" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='plugins/OwlCarousel2-2.3.4/owl.carousel.css')}}">
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='plugins/OwlCarousel2-2.3.4/owl.theme.default.css')}}">
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='plugins/OwlCarousel2-2.3.4/animate.css')}}">
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/responsive.css')}}">
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/about_responsive.css')}}">
+
+</head>
+<body>
+
+<div class="super_container">
+
+	<!-- Header -->
+
+	<header class="header">
+
+		<!-- Header Content -->
+		<div class="header_content">
+			<div class="container">
+				<div class="row">
+					<div class="col">
+						<div class="main_nav_container_outer d-flex flex-row align-items-end justify-content-center trans_400">
+							<nav class="main_nav">
+								<div class="main_nav_container d-flex flex-row align-items-center justify-content-lg-start justify-content-center">
+									<div>
+										<!-- Header LIVE -->
+										<div class="header_live">
+											<a href="#">
+												<div class="d-flex flex-row align-items-center justify-content-start">
+													<div>live</div>
+													<div>Lorem ipsum dolor sit amet, consectetur...</div>
+												</div>
+											</a>
+										</div>
+										<ul class="d-flex flex-row align-items-start justify-content-end">
+											<li><a href="{{ url_for('main.home')}}">Le club</a></li>
+											<li><a href="{{ url_for('main.senior')}}">Séniors</a></li>
+											<li><a href="{{ url_for('main.feminine')}}">Féminines</a></li>
+										</ul>
+									</div>
+									<div class="logo_container text-center"><div class="trans_400"><a href="#"><img src="{{ url_for('static', filename='images/logo.png')}}" alt=""></a></div></div>
+									<div>
+										<ul class="d-flex flex-row align-items-start justify-content-start">
+											<li><a href="#">Jeunes</a></li>
+											<li><a href="{{ url_for('main.blog')}}">Le Blog</a></li>
+											<li><a href="contact.html">Sponsors</a></li>
+										</ul>
+									</div>
+								</div>
+							</nav>
+							<div class="hamburger">
+								<i class="fa fa-bars trans_200"></i>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+
+
+		</div>
+
+	</header>
+
+	<!-- Menu -->
+
+	<div class="menu">
+		<div class="menu_background">
+			<div class="menu_container d-flex flex-column align-items-end justify-content-start">
+				<div class="menu_close">fermer</div>
+				<div class="menu_user_area">
+					<ul class="d-flex flex-row align-items-start justify-content-end">
+					</ul>
+				</div>
+				<nav class="menu_nav">
+					<ul class="text-right">
+						<li><a href="{{ url_for('main.home')}}">Le club</a></li>
+						<li><a href="{{ url_for('main.senior')}}">Sénior</a></li>
+						<li><a href="{{ url_for('main.feminine')}}">Féminines</a></li>
+						<li><a href="contact.html">contact</a></li>
+					</ul>
+				</nav>
+				<div class="menu_links">
+					<ul class="d-flex flex-row align-items-start justify-content-start">
+						<li><a href="#">GET Tickets</a></li>
+						<li><a href="#">Shop</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+
+  {% with messages = get_flashed_messages(with_categories=true) %}
+                  {% if messages %}
+                  {% for category, message in messages %}
+                  <!--  <div class="alert alert-{{ category }}">
+                      {{ message }}
+                    </div>
+                  -->
+
+                  {% endfor %}
+                  {% endif %}
+                {% endwith %}
+    {% block content %}{% endblock %}
+
+  	<!-- Footer -->
+
+  	<footer class="footer">
+  		<div class="footer_container">
+  			<div class="container">
+  				<div class="row">
+  					<div class="col-lg-5 order-lg-1 order-3">
+  						<div class="footer_image d-flex flex-column align-items-lg-start align-items-center justify-content-end">
+  							<div><img src="{{ url_for('static', filename='images/parc.png')}}" alt=""></div>
+  						</div>
+  					</div>
+  					<div class="col-lg-3 order-lg-2 order-1">
+  						<div class="footer_contact_info">
+  							<div class="footer_logo"><a href="#"><img src="{{ url_for('static', filename='images/logo.png')}}" alt=""></a></div>
+  							<div class="footer_contact_list">
+  								<ul>
+  									<li class="d-flex flex-row align-items-start justify-content-start">
+  										<div>Adresse</div>
+  										<div>stade de la forêt 56400 AURAY</div>
+  									</li>
+  									<li class="d-flex flex-row align-items-start justify-content-start">
+  										<div>Téléphone</div>
+  										<div>+36 345 7953 4994</div>
+  									</li>
+  									<li class="d-flex flex-row align-items-start justify-content-start">
+  										<div>E-mail</div>
+  										<div>yourmail@gmail.com</div>
+  									</li>
+  								</ul>
+  							</div>
+  						</div>
+  					</div>
+
+  				</div>
+  			</div>
+  		</div>
+  		<div class="footer_bar">
+  			<div class="container">
+  				<div class="row">
+  					<div class="col">
+  						<div class="footer_bar_content d-flex flex-md-row flex-column align-items-md-center align-items-start justify-content-start">
+  							<div class="cr order-md-1 order-2"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+  Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+  <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></div>
+  							<nav class="footer_nav ml-md-auto order-md-2 order-1">
+  								<ul class="d-flex flex-row align-items-start justify-content-start flex-wrap">
+										<li><a href="https://www.linkedin.com/in/valentin-lefranc-10542b66">Autheur : Valentin Lefranc  </a></li>
+  									<li><a href="{{ url_for('main.new_post')}}">Admin</a></li>
+  								</ul>
+  							</nav>
+  						</div>
+  					</div>
+  				</div>
+  			</div>
+  		</div>
+  	</footer>
+  </div>
+
+
+
+  <script src="{{ url_for('static', filename='js/jquery-3.3.1.min.js')}}"></script>
+  <script src="{{ url_for('static', filename='styles/bootstrap-4.1.2/popper.js')}}"></script>
+  <script src="{{ url_for('static', filename='styles/bootstrap-4.1.2/bootstrap.min.js')}}"></script>
+  <script src="{{ url_for('static', filename='plugins/greensock/TweenMax.min.js')}}"></script>
+  <script src="{{ url_for('static', filename='plugins/greensock/TimelineMax.min.js')}}"></script>
+  <script src="{{ url_for('static', filename='plugins/scrollmagic/ScrollMagic.min.js')}}"></script>
+  <script src="{{ url_for('static', filename='plugins/greensock/animation.gsap.min.js')}}"></script>
+  <script src="{{ url_for('static', filename='plugins/greensock/ScrollToPlugin.min.js')}}"></script>
+  <script src="{{ url_for('static', filename='plugins/OwlCarousel2-2.3.4/owl.carousel.js')}}"></script>
+  <script src="{{ url_for('static', filename='plugins/easing/easing.js')}}"></script>
+  <script src="{{ url_for('static', filename='plugins/progressbar/progressbar.min.js')}}"></script>
+  <script src="{{ url_for('static', filename='plugins/parallax-js-master/parallax.min.js')}}"></script>
+
+	<script src="{{ url_for('static', filename='js/custom.js')}}"></script>
+
+
+  </body>
+  </html>

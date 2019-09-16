@@ -1,0 +1,71 @@
+/*********************************
+6. About
+*********************************/
+
+.about
+{
+	background: #FFFFFF;
+}
+.about .container
+{
+	padding-left: 0;
+	padding-right: 0;
+	max-width: 100%;
+}
+.about .container .row
+{
+	margin-left: 0;
+	margin-right: 0;
+}
+.about .container .row > div[class^='col']
+{
+	padding-left: 0;
+	padding-right: 0;
+}
+.about_image
+{
+	height: 100%;
+}
+.about_image img
+{
+	display: none;
+}
+.about_content
+{
+	padding-top: 92px;
+	padding-bottom: 86px;
+	padding-left: 112px;
+	padding-right: 100px;
+}
+.about_content_container
+{
+	max-width: 690px;
+}
+.about_title
+{
+	font-size: 24px;
+	font-weight: 700;
+	color: #888888;
+	text-transform: uppercase;
+	line-height: 1.2;
+	margin-top: 13px;
+}
+.about_subtitle
+{
+	font-size: 16px;
+	font-weight: 500;
+	color: #b5b5b5;
+	margin-top: 3px;
+}
+.about_text
+{
+	margin-top: 44px;
+}
+.about_text p:not(:last-of-type)
+{
+	margin-bottom: 30px;
+}
+.about_button
+{
+	margin-top: 60px;
+}
