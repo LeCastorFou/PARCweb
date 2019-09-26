@@ -21,6 +21,10 @@ import plotly
 import json
 from flask import jsonify
 import datetime
+from functools import wraps
+from flask import request, Response
+
+
 ######### LOADING BDD ########
 #exec(open(os.getcwd() + '/tasty/MongoConnection/Functions_Mongo.py').read())
 #exec(open('MongoConnection/Functions_Mongo.py').read())
@@ -32,10 +36,35 @@ import datetime
 
 main = Blueprint('main',__name__)
 
+
+def check_auth(username, password):
+    """This function is called to check if a username /
+    password combination is valid.
+    """
+    return username == 'PARC' and password == 'PaurayRC!'
+
+def authenticate():
+    """Sends a 401 response that enables basic auth"""
+    return Response(
+    'Could not verify your access level for that URL.\n'
+    'You have to login with proper credentials', 401,
+    {'WWW-Authenticate': 'Basic realm="Login Required"'})
+
+def requires_auth(f):
+    @wraps(f)
+    def decorated(*args, **kwargs):
+        auth = request.authorization
+        if not auth or not check_auth(auth.username, auth.password):
+            return authenticate()
+        return f(*args, **kwargs)
+    return decorated
+
 @main.route("/")
 @main.route("/home")
 def home():
-    return render_template('index.html')
+    posts = Post.query.all()
+    posts = reversed(posts[-3:])
+    return render_template('index.html',posts=posts)
 
 @main.route("/senior")
 def senior():
@@ -46,12 +75,15 @@ def feminine():
     return render_template('feminine.html')
 
 @main.route("/jeunes")
-def cours():
+def jeunes():
     return render_template('jeunes.html')
 
 @main.route("/blog")
 def blog():
-    return render_template('blog.html')
+    posts = Post.query.all()
+    posts = reversed(posts[-10:])
+    month = {'January':'Jan','February':'Fev','March':'Mar','April':'Avr','May':'Mai','June':'Juin','July':'Juil','August':'Aout','September':'Sept','October':'Oct','November':'Nov','December':'Dec'}
+    return render_template('blog.html',posts=posts, month =month)
 
 @main.route("/sponsors")
 def sponsors():
@@ -59,14 +91,42 @@ def sponsors():
 
 
 # creer un post
+
 @main.route("/post/new",  methods=['GET','POST'])
+@requires_auth
 def new_post():
+    posts = Post.query.all()
     form = PostForm()
     if form.validate_on_submit():
-        picture_file = save_picture(form.picture.data)
-        post = Post(title=form.title.data, content=form.content.data, Image = picture_file)
+        if form.picture.data:
+            picture_file = save_picture(form.picture.data)
+
+        post = Post(title=form.title.data, content=form.content.data, image_file = picture_file)
+
         db.session.add(post)
         db.session.commit()
         flash('Post créé','success')
         return redirect(url_for('main.blog'))
-    return render_template('create_post.html', title = 'Nouveau Post', form =form,legend = 'Nouveau Post')
+    return render_template('create_post.html', title = 'Nouveau Post', posts = posts,form =form,legend = 'Nouveau Post')
+
+
+# Delete post
+@main.route("/post/<int:post_id>/delete", methods=['POST'])
+def delete_post(post_id):
+    post = Post.query.get_or_404(post_id)
+    db.session.delete(post)
+    db.session.commit()
+    flash('Post effacé', 'success')
+    posts = Post.query.all()
+    form = PostForm()
+    if form.validate_on_submit():
+        if form.picture.data:
+            picture_file = save_picture(form.picture.data)
+
+        post = Post(title=form.title.data, content=form.content.data, image_file = picture_file)
+
+        db.session.add(post)
+        db.session.commit()
+        flash('Post créé','success')
+        return redirect(url_for('main.blog'))
+    return render_template('create_post.html', title = 'Nouveau Post', posts = posts,form =form,legend = 'Nouveau Post')

@@ -16,4 +16,4 @@ class Post(db.Model):
     # relation avec author. Chaque post a un author
 
     def __repr__(self):
-        return f"Post('{self.title}', '{self.date_posted}')"
+        return f"Post('{self.title}','{self.image_file}', '{self.date_posted}')"

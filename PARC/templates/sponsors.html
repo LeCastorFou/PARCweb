@@ -1,0 +1,237 @@
+{% extends "layout.html" %}
+{%block content %}
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/team.css')}}">
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/team_responsive.css')}}">
+
+	<!-- Home -->
+
+	<div class="home d-flex flex-column align-items-start justify-content-end">
+		<div class="parallax_background parallax-window" data-parallax="scroll" data-image-src="images/team_page.jpg" data-speed="0.8"></div>
+		<div class="container">
+			<div class="row">
+				<div class="col text-center">
+					<div class="home_text"><span>Les partenaires</span></div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Info -->
+
+	<div class="info">
+		<div class="container" style="margin-bottom: 100px;">
+			<div class="row">
+
+				<!-- Info Image -->
+				<div class="col-lg-6 order-lg-1 order-2">
+					<div class="info_image">
+						<div class="background_image" style="background-image:url(static/images/CiteMarine.png)"></div>
+						<img src="{{ url_for('static', filename='images/CiteMarine.png')}}" alt="">
+					</div>
+				</div>
+
+				<!-- Info Content -->
+				<div class="col-lg-6 order-lg-2 order-1">
+					<div class="info_content">
+						<div class="section_title_container">
+							<div class="section_title"><h1>Cité Marine</h1></div>
+							<div class="section_subtitle">Depuis 201x</div>
+						</div>
+						<div class="info_text">
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam accumsan dolor id enim lacinia, sed feugiat ex suscipit. Nunc molestie malesuada pellentesque. Quisque mattis ante ut nisl tristique ornare. Aenean interdum dictum augue, quis egestas erat lacinia in. Proin dictum commodo nulla ut mattis. Pellentesque vel commodo nisi. Donec eget purus eget ex efficitur tristique. Nulla ut mollis justo.</p>
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+				<div class="container" style="margin-bottom: 100px;">
+					<div class="row">
+
+					<!-- Info Image -->
+					<div class="col-lg-6 order-lg-1 order-2">
+						<div class="info_content">
+							<div class="section_title_container">
+								<div class="section_title"><h1>Auray Quiberon</h1></div>
+								<div class="section_subtitle">Depuis 201x</div>
+							</div>
+							<div class="info_text">
+								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam accumsan dolor id enim lacinia, sed feugiat ex suscipit. Nunc molestie malesuada pellentesque. Quisque mattis ante ut nisl tristique ornare. Aenean interdum dictum augue, quis egestas erat lacinia in. Proin dictum commodo nulla ut mattis. Pellentesque vel commodo nisi. Donec eget purus eget ex efficitur tristique. Nulla ut mollis justo.</p>
+							</div>
+
+						</div>
+
+					</div>
+
+					<!-- Info Content -->
+					<div class="col-lg-6 order-lg-2 order-1">
+						<div class="info_image">
+							<img src="{{ url_for('static', filename='images/AQTA.jpg')}}" style="display: block;" alt="">
+						</div>
+					</div>
+
+				</div>
+			</div>
+
+
+		<div class="container" style="margin-bottom: 100px;">
+			<div class="row">
+
+				<!-- Info Image -->
+				<div class="col-lg-6 order-lg-1 order-2">
+					<div class="info_image">
+
+						<img src="{{ url_for('static', filename='images/CDB.png')}}" style="display: block;" alt="">
+					</div>
+				</div>
+
+				<!-- Info Content -->
+				<div class="col-lg-6 order-lg-2 order-1">
+					<div class="info_content">
+						<div class="section_title_container">
+							<div class="section_title"><h1>Charcuterie du Blavet</h1></div>
+							<div class="section_subtitle">Depuis 201x</div>
+						</div>
+						<div class="info_text">
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam accumsan dolor id enim lacinia, sed feugiat ex suscipit. Nunc molestie malesuada pellentesque. Quisque mattis ante ut nisl tristique ornare. Aenean interdum dictum augue, quis egestas erat lacinia in. Proin dictum commodo nulla ut mattis. Pellentesque vel commodo nisi. Donec eget purus eget ex efficitur tristique. Nulla ut mollis justo.</p>
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="container" style="margin-bottom: 100px;">
+			<div class="row">
+
+			<!-- Info Image -->
+			<div class="col-lg-6 order-lg-1 order-2">
+				<div class="info_content">
+					<div class="section_title_container">
+						<div class="section_title"><h1>EPRIM</h1></div>
+						<div class="section_subtitle">Depuis 201x</div>
+					</div>
+					<div class="info_text">
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam accumsan dolor id enim lacinia, sed feugiat ex suscipit. Nunc molestie malesuada pellentesque. Quisque mattis ante ut nisl tristique ornare. Aenean interdum dictum augue, quis egestas erat lacinia in. Proin dictum commodo nulla ut mattis. Pellentesque vel commodo nisi. Donec eget purus eget ex efficitur tristique. Nulla ut mollis justo.</p>
+					</div>
+
+				</div>
+
+			</div>
+
+			<!-- Info Content -->
+			<div class="col-lg-6 order-lg-2 order-1">
+				<div class="info_image">
+					<img src="{{ url_for('static', filename='images/eprim.png')}}" style="display: block;" alt="">
+				</div>
+			</div>
+
+		</div>
+	</div>
+
+	<div class="container" style="margin-bottom: 100px;">
+		<div class="row">
+
+			<!-- Info Image -->
+			<div class="col-lg-6 order-lg-1 order-2">
+				<div class="info_image">
+
+					<img src="{{ url_for('static', filename='images/brets.png')}}" style="display: block;" alt="">
+				</div>
+			</div>
+
+			<!-- Info Content -->
+			<div class="col-lg-6 order-lg-2 order-1">
+				<div class="info_content">
+					<div class="section_title_container">
+						<div class="section_title"><h1>Brets</h1></div>
+						<div class="section_subtitle">Depuis 201x</div>
+					</div>
+					<div class="info_text">
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam accumsan dolor id enim lacinia, sed feugiat ex suscipit. Nunc molestie malesuada pellentesque. Quisque mattis ante ut nisl tristique ornare. Aenean interdum dictum augue, quis egestas erat lacinia in. Proin dictum commodo nulla ut mattis. Pellentesque vel commodo nisi. Donec eget purus eget ex efficitur tristique. Nulla ut mollis justo.</p>
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="container" style="margin-bottom: 100px;">
+		<div class="row">
+
+			<!-- Info Image -->
+			<div class="col-lg-6 order-lg-1 order-2">
+				<div class="info_image">
+
+					<img src="{{ url_for('static', filename='images/AurayV.png')}}" style="display: block;" alt="">
+				</div>
+			</div>
+
+			<!-- Info Content -->
+			<div class="col-lg-6 order-lg-2 order-1">
+				<div class="info_content">
+					<div class="section_title_container">
+						<div class="section_title"><h1>Auray Voyage</h1></div>
+						<div class="section_subtitle">Depuis 201x</div>
+					</div>
+					<div class="info_text">
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam accumsan dolor id enim lacinia, sed feugiat ex suscipit. Nunc molestie malesuada pellentesque. Quisque mattis ante ut nisl tristique ornare. Aenean interdum dictum augue, quis egestas erat lacinia in. Proin dictum commodo nulla ut mattis. Pellentesque vel commodo nisi. Donec eget purus eget ex efficitur tristique. Nulla ut mollis justo.</p>
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="container" style="margin-bottom: 100px;">
+		<div class="row">
+
+		<!-- Info Image -->
+		<div class="col-lg-6 order-lg-1 order-2">
+			<div class="info_content">
+				<div class="section_title_container">
+					<div class="section_title"><h1>Tallec</h1></div>
+					<div class="section_subtitle">Depuis 201x</div>
+				</div>
+				<div class="info_text">
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam accumsan dolor id enim lacinia, sed feugiat ex suscipit. Nunc molestie malesuada pellentesque. Quisque mattis ante ut nisl tristique ornare. Aenean interdum dictum augue, quis egestas erat lacinia in. Proin dictum commodo nulla ut mattis. Pellentesque vel commodo nisi. Donec eget purus eget ex efficitur tristique. Nulla ut mollis justo.</p>
+				</div>
+
+			</div>
+
+		</div>
+
+		<!-- Info Content -->
+		<div class="col-lg-6 order-lg-2 order-1">
+			<div class="info_image">
+				<img src="{{ url_for('static', filename='images/Tallec.jpg')}}" style="display: block;" alt="">
+			</div>
+		</div>
+
+	</div>
+</div>
+
+
+
+
+		</div>
+
+
+	<!-- CTA -->
+
+	<div class="cta">
+		<div class="container">
+			<div class="row">
+				<div class="col">
+					<div class="cta_content d-flex flex-md-row flex-column align-items-md-center align-items-start justify-content-start">
+						<div class="cta_text">Vous voulez devenir <span>Partenaire?</span></div>
+						<div class="cta_button button ml-md-auto"><a href="#">Contactez nous</a></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+{% endblock content %}

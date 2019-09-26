@@ -1,0 +1,168 @@
+{% extends "layout.html" %}
+{%block content %}
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/team.css')}}">
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/team_responsive.css')}}">
+
+	<!-- Home -->
+
+	<div class="home d-flex flex-column align-items-start justify-content-end">
+		<div class="parallax_background parallax-window" data-parallax="scroll" data-image-src="static/images/jeunes2.png" data-speed="0.8"></div>
+		<div class="container">
+			<div class="row">
+				<div class="col text-center">
+					<div class="home_text">Les équipes<span> jeunes</span></div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Info -->
+
+	<div class="info">
+		<div class="container" style="margin-bottom: 100px;">
+			<div class="row">
+
+				<!-- Info Image -->
+				<div class="col-lg-6 order-lg-1 order-2">
+					<div class="info_image">
+						<div class="background_image" style="background-image:url(static/images/jeunes.jpg)"></div>
+						<img src="{{ url_for('static', filename='images/CiteMarine.png')}}" alt="">
+					</div>
+				</div>
+
+				<!-- Info Content -->
+				<div class="col-lg-6 order-lg-2 order-1">
+					<div class="info_content">
+						<div class="section_title_container">
+							<div class="section_title"><h1>Les U...</h1></div>
+							<div class="section_subtitle">Entraineurs : </div>
+						</div>
+						<div class="info_text">
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam accumsan dolor id enim lacinia, sed feugiat ex suscipit. Nunc molestie malesuada pellentesque. Quisque mattis ante ut nisl tristique ornare. Aenean interdum dictum augue, quis egestas erat lacinia in. Proin dictum commodo nulla ut mattis. Pellentesque vel commodo nisi. Donec eget purus eget ex efficitur tristique. Nulla ut mollis justo.</p>
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+			<!-- Schedule -->
+
+			<div class="schedule">
+				<div class="container">
+					<div class="row">
+						<div class="col">
+							<div class="section_title_container">
+								<div class="section_title"><h1>Agenda des entrainements</h1></div>
+								<div class="section_subtitle">Pour toutes les catégories</div>
+							</div>
+						</div>
+					</div>
+					<div class="row schedule_row">
+
+						<!-- Schedule List -->
+						<div class="col-lg-4">
+							<div class="schedule_container schedule_a">
+								<div class="schedule_title_bar d-flex flex-row align-items-center justify-content-between">
+									<div class="schedule_team_name">U6 / U8 / U10</div>
+									<div class="schedule_icon"><img src="images/icon_5.svg" alt=""></div>
+									<div class="schedule_location">charles de Blois</div>
+								</div>
+								<div class="schedule_list">
+									<ul>
+										<li class="d-flex flex-row align-items-start justify-content-start">
+											<div>mercredi</div>
+											<div class="ml-auto">16H30 - 18H</div>
+										</li>
+										<li class="d-flex flex-row align-items-start justify-content-start">
+											<div>Samedi</div>
+											<div class="ml-auto">10H30 - 12H</div>
+										</li>
+
+									</ul>
+								</div>
+							</div>
+						</div>
+
+						<!-- Schedule List -->
+						<div class="col-lg-4">
+							<div class="schedule_container schedule_b">
+								<div class="schedule_title_bar d-flex flex-row align-items-center justify-content-between">
+									<div class="schedule_team_name">U12 / U14</div>
+									<div class="schedule_icon"><img src="images/icon_5.svg" alt=""></div>
+									<div class="schedule_location"></div>
+								</div>
+								<div class="schedule_list">
+									<ul>
+										<li class="d-flex flex-row align-items-start justify-content-start">
+											<div>mercredi </div>
+											<div class="ml-auto">Stade du Printemps</div>
+										</li>
+										<li class="d-flex flex-row align-items-start justify-content-start">
+											<div> </div>
+											<div class="ml-auto">16H30 - 18H </div>
+										</li>
+										<li class="d-flex flex-row align-items-start justify-content-start">
+											<div>vendredi</div>
+											<div class="ml-auto">Stade de la forêt</div>
+										</li>
+										<li class="d-flex flex-row align-items-start justify-content-start">
+											<div> </div>
+											<div class="ml-auto">18H - 19H30 </div>
+										</li>
+
+									</ul>
+								</div>
+							</div>
+						</div>
+
+						<!-- Schedule List -->
+						<div class="col-lg-4">
+							<div class="schedule_container schedule_a">
+								<div class="schedule_title_bar d-flex flex-row align-items-center justify-content-between">
+									<div class="schedule_team_name">U16 / U19</div>
+									<div class="schedule_icon"><img src="images/icon_5.svg" alt=""></div>
+									<div class="schedule_location">Charles de Blois</div>
+								</div>
+								<div class="schedule_list">
+									<ul>
+										<li class="d-flex flex-row align-items-start justify-content-start">
+											<div>mercredi</div>
+											<div class="ml-auto">18h15 - 20h</div>
+										</li>
+										<li class="d-flex flex-row align-items-start justify-content-start">
+											<div>vendredi</div>
+											<div class="ml-auto">18h15 - 20h</div>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</div>
+
+
+
+
+		</div>
+
+
+	<!-- CTA -->
+
+	<div class="cta">
+		<div class="container">
+			<div class="row">
+				<div class="col">
+					<div class="cta_content d-flex flex-md-row flex-column align-items-md-center align-items-start justify-content-start">
+						<div class="cta_text">Intéressé par les <span>équipes jeunes?</span></div>
+						<div class="cta_button button ml-md-auto"><a href="#">Contactez nous</a></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+{% endblock content %}

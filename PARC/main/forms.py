@@ -1,5 +1,5 @@
 from flask_wtf import FlaskForm
-from flask_wtf.file import FileField, FileAllowed
+from flask_wtf.file import FileField, FileAllowed, FileRequired
 from wtforms import StringField, SelectField, PasswordField, SelectMultipleField, SubmitField, BooleanField, TextAreaField, DateTimeField, IntegerField
 from wtforms.validators import DataRequired, Length, Email, EqualTo, ValidationError, NumberRange
 from PARC.models import  Post
@@ -13,10 +13,10 @@ import datetime
 class PostForm(FlaskForm):
     title = StringField('Titre', validators=[DataRequired()])
     content = TextAreaField('Contenu', validators=[DataRequired()])
-    picture = FileField('Image :', validators=[FileAllowed(['jpg','png','jpeg'])])
+    picture = FileField('Image :', validators=[FileAllowed(['JPG','JPEG','PNG','jpg','png','jpeg']),FileRequired('Pas de fichier!')])
     submit = SubmitField('Post')
 
 class AdminForm(FlaskForm):
     User = StringField('Titre', validators=[DataRequired()])
     mdp = StringField('Contenu', validators=[DataRequired()])
-    submit = SubmitField('Post')
+    submit = SubmitField('Publier')
