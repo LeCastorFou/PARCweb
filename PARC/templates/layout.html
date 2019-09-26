@@ -13,6 +13,7 @@
 <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='plugins/OwlCarousel2-2.3.4/animate.css')}}">
 <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/responsive.css')}}">
 <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/about_responsive.css')}}">
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/drawdown.css')}}">
 <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -44,17 +45,70 @@
 											</a>
 										</div>
 										<ul class="d-flex flex-row align-items-start justify-content-end">
-											<li><a href="{{ url_for('main.home')}}">Le club</a></li>
-											<li><a href="{{ url_for('main.senior')}}">Séniors</a></li>
-											<li><a href="{{ url_for('main.feminine')}}">Féminines</a></li>
+											<li >
+												<div class="dropdown">
+													<p class="dropbtn">Le Club</p>
+													<div class="dropdown-content">
+														<a href="{{ url_for('main.home')}}#apropos">A propos</a>
+														<a href="{{ url_for('main.home')}}#trombi">Trombinoscope</a>
+														<a href="{{ url_for('main.home')}}#joueur">Joueurs</a>
+														<a href="{{ url_for('main.home')}}#news">News</a>
+													</div>
+												</div>
+											</li>
+											<li >
+												<div class="dropdown">
+													<p class="dropbtn">Sénior</p>
+													<div class="dropdown-content">
+														<a href="{{ url_for('main.senior')}}#equipe">L'équipe</a>
+														<a href="{{ url_for('main.senior')}}#match">Prochain Match</a>
+														<a href="{{ url_for('main.senior')}}#class">Classement</a>
+														<a href="{{ url_for('main.senior')}}#ent">Entrainements</a>
+													</div>
+												</div>
+											</li>
+											<li >
+												<div class="dropdown">
+													<p class="dropbtn">Féminines</p>
+													<div class="dropdown-content">
+														<a href="{{ url_for('main.feminine')}}#equipe">L'équipe</a>
+														<a href="{{ url_for('main.feminine')}}#class">Classement</a>
+														<a href="{{ url_for('main.feminine')}}#ent">Entrainements</a>
+													</div>
+												</div>
+											</li>
 										</ul>
 									</div>
 									<div class="logo_container text-center"><div class="trans_400"><a href="#"><img src="{{ url_for('static', filename='images/logo.png')}}" alt=""></a></div></div>
 									<div>
 										<ul class="d-flex flex-row align-items-start justify-content-start">
-											<li><a href="{{ url_for('main.jeunes')}}">Jeunes</a></li>
-											<li><a href="{{ url_for('main.blog')}}">Le Blog</a></li>
-											<li><a href="{{ url_for('main.sponsors')}}">Sponsors</a></li>
+											<li >
+												<div class="dropdown">
+													<p class="dropbtn">Jeunes</p>
+													<div class="dropdown-content">
+														<a href="{{ url_for('main.jeunes')}}">U6/U8/U10</a>
+														<a href="{{ url_for('main.jeunes')}}">U12/U14</a>
+														<a href="{{ url_for('main.jeunes')}}">U16/U19</a>
+													</div>
+												</div>
+											</li>
+											<li >
+												<div class="dropdown">
+													<p class="dropbtn">Blog</p>
+													<div class="dropdown-content">
+														<a href="{{ url_for('main.blog')}}">Articles</a>
+													</div>
+												</div>
+											</li>
+											<li >
+												<div class="dropdown">
+													<p class="dropbtn">Partenaires</p>
+													<div class="dropdown-content">
+														<a href="{{ url_for('main.sponsors')}}">Acceuil</a>
+														<a href="{{ url_for('main.sponsors')}}">Tous les partenaires</a>
+													</div>
+												</div>
+											</li>
 										</ul>
 									</div>
 								</div>
