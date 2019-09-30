@@ -351,7 +351,7 @@ section
 }
 .header.scrolled .main_nav_container_outer
 {
-	height: 70px;
+	height: 90px;
 }
 .header.scrolled .logo_container > div
 {
@@ -364,7 +364,6 @@ section
 	top: 0;
 	left: 0;
 	width: 100%;
-	background: rgba(28,36,93,0.75);
 }
 .header_bar_content
 {
