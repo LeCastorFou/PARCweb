@@ -1,0 +1,147 @@
+{% extends "layout.html" %}
+{%block content %}
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/team.css')}}">
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/team_responsive.css')}}">
+
+	<!-- Home -->
+
+	<div style="padding-bottom: 0px; padding-top: 200px;">
+		<div class="parallax_background parallax-window" data-parallax="scroll" data-image-src="images/team_page.jpg" data-speed="0.8"></div>
+		<div class="container">
+			<div class="row">
+				<div class="col text-center">
+					<div class="home_text"><span>Les équipements</span></div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Info -->
+
+	<div class="info">
+		<div class="container" style="margin-bottom: 100px;">
+			<div class="row">
+
+				<!-- Info Image -->
+				<div class="col-lg-6 order-lg-1 order-2">
+					<div class="info_image">
+						<img src="{{ url_for('static', filename='images/terrain.jpg')}}" style="display: block;" alt="">
+					</div>
+				</div>
+
+				<!-- Info Content -->
+				<div class="col-lg-6 order-lg-2 order-1">
+					<div class="info_content">
+						<div class="section_title_container">
+							<div class="section_title"><h1>Stade de la forêt</h1></div>
+							<div class="section_subtitle">Auray</div>
+						</div>
+						<div class="mapouter">
+							<div class="gmap_canvas">
+							<iframe width="600" height="500" id="gmap_canvas" src="https://maps.google.com/maps?q=stade%20la%20foret%20auray&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+							<a href="https://www.embedgooglemap.net/blog/nordvpn-coupon-code/">nordvpn coupon</a>
+							</div><style>.mapouter{position:relative;text-align:right;height:500px;width:600px;}.gmap_canvas {overflow:hidden;background:none!important;height:500px;width:600px;}</style>
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+			<div class="container" style="margin-bottom: 100px;">
+				<div class="row">
+
+					<!-- Info Image -->
+					<div class="col-lg-6 order-lg-1 order-2">
+						<div class="info_image">
+							<img src="{{ url_for('static', filename='images/terrain.jpg')}}" style="display: block;" alt="">
+						</div>
+					</div>
+
+					<!-- Info Content -->
+					<div class="col-lg-6 order-lg-2 order-1">
+						<div class="info_content">
+							<div class="section_title_container">
+								<div class="section_title"><h1>Stade Charles de Blois</h1></div>
+								<div class="section_subtitle">Auray</div>
+							</div>
+							<div class="mapouter">
+								<div class="gmap_canvas">
+								<iframe width="600" height="500" id="gmap_canvas" src="https://maps.google.com/maps?q=stade%20charles%20de%20blois%20auray&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+								<a href="https://www.embedgooglemap.net/blog/nordvpn-coupon-code/">nordvpn coupon</a>
+							</div>
+							<style>.mapouter{position:relative;text-align:right;height:500px;width:600px;}.gmap_canvas {overflow:hidden;background:none!important;height:500px;width:600px;}</style>
+						</div>
+
+						</div>
+					</div>
+				</div>
+			</div>
+
+		<div class="container" style="margin-bottom: 100px;">
+			<div class="row">
+
+				<!-- Info Image -->
+				<div class="col-lg-6 order-lg-1 order-2">
+					<div class="info_image">
+
+						<img src="{{ url_for('static', filename='images/terrain.jpg')}}" style="display: block;" alt="">
+					</div>
+				</div>
+
+				<!-- Info Content -->
+				<div class="col-lg-6 order-lg-2 order-1">
+					<div class="info_content">
+						<div class="section_title_container">
+							<div class="section_title"><h1>Stade du Goh Lanno</h1></div>
+							<div class="section_subtitle">Pluvigner</div>
+						</div>
+						<div class="mapouter"><div class="gmap_canvas">
+							<iframe width="600" height="500" id="gmap_canvas" src="https://maps.google.com/maps?q=pluvigner%20rugby%20club&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+							<a href="https://www.embedgooglemap.net/blog/nordvpn-coupon-code/">nordvpn coupon</a>
+							</div>
+							<style>.mapouter{position:relative;text-align:right;height:500px;width:600px;}.gmap_canvas {overflow:hidden;background:none!important;height:500px;width:600px;}</style>
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="container" style="margin-bottom: 100px;">
+			<div class="row">
+
+			<!-- Info Image -->
+			<div class="col-lg-6 order-lg-1 order-2">
+				<div class="info_content">
+					<div class="section_title_container">
+						<div class="section_title"><h1>Salle de musculation</h1></div>
+						<div class="section_subtitle">Auray</div>
+					</div>
+					<div class="info_text">
+						<p>Sous le club house du stade de la forêt</p>
+					</div>
+
+				</div>
+
+			</div>
+
+			<!-- Info Content -->
+			<div class="col-lg-6 order-lg-2 order-1">
+				<div class="info_image">
+					<img src="{{ url_for('static', filename='images/muscu.jpg')}}" style="display: block;" alt="">
+				</div>
+			</div>
+
+		</div>
+	</div>
+
+
+
+
+		</div>
+
+
+
+{% endblock content %}

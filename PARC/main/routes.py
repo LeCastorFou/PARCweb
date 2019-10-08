@@ -89,6 +89,10 @@ def blog():
 def sponsors():
     return render_template('sponsors.html')
 
+@main.route("/equipements")
+def equipements():
+    return render_template('equipements.html')
+
 
 # creer un post
 
