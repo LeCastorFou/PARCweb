@@ -378,7 +378,7 @@
 
 		<script type="text/javascript" language="JavaScript">
 
-		randomNumber = Math.floor(Math.random()*2+1);
+		randomNumber = Math.floor(Math.random()*6+1);
 
 		window.onload = function() {
 		        document.getElementById(randomNumber.toString()).style.display = "block";
@@ -428,7 +428,7 @@
 	            <div class="player_name">Valentin Lefranc</div>
 	          </div>
 	          <div class="player_text">
-	            <p>Valentin née en 1989 joue au rugby depuis ses 19 ans et évolue au poste de demie de méléé. Ses études l'ont amené à jouer pour de nombreux clubs en france (SPRC, Le Rheu, Gif sur Yvette, Marcoussis) et à l'étranger : Bérisso en Argentine, RC Valencia en Espagne et RC Berlin en Allemagne.
+	            <p>Valentin est née en 1989. Il joue au rugby depuis ses 19 ans et évolue au poste de demie de méléé. Ses études l'ont amené à jouer pour de nombreux clubs en france (SPRC, Le Rheu, Gif sur Yvette, Marcoussis) et à l'étranger : Bérisso en Argentine, RC Valencia en Espagne et RC Berlin en Allemagne.
 							Le rugby lui à toujours permis de s'intégrer malgré les nombreux voyages. Il est au PARC depuis 2016</p>
 	            <p>Il travail en tant que consultant en intelligence artificielle. Ses autres hobbies sont le windsurf et le football Gaélique.</p>
 	          </div>
@@ -442,6 +442,130 @@
 	      </div>
 	    </div>
 	  </div>
+	</div>
+
+	<div id='3' class="player" style="display:None;">
+	  <div id="joueur" class="container">
+	    <div class="row">
+	      <div class="col-xl-6">
+	        <div class="player_content">
+	          <div class="section_title_container">
+	            <div class="section_title"><h1>Un joueur au hasard</h1></div>
+	            <div class="section_subtitle">présentation</div>
+	          </div>
+	          <div class="player_name_container d-flex flex-row align-items-end justify-content-start">
+	            <div class="player_num">15</div>
+	            <div class="player_name">Julien Puyau </div>
+	          </div>
+	          <div class="player_text">
+	            <p>Plus zèbre que sanglier Julien est née en 1999. Il est rugbyman depuis ses 4 ans et a écumé les clubs du morbihan Lanester/Lorient/Vannes/Gregam/Auray.
+								Il a toujours beaucoups joué :Sélection Bretagne (XV et seven) Section Rugby au lycée Lesage à Vannes et est actuellement président d’une association de rugby à 7. Il à aussi participé à des match en ligue allemande avec le TSV d’Heidelberg.</p>
+	            <p>Sa phrase « L’attitude est un choix : souhaite le meilleur pour devoir t’en donner les moyens. » Julien est également Diplômé d’une licence QSE</p>
+	          </div>
+	        </div>
+	      </div>
+	      <div class="col-xl-6">
+	        <div class="player_images d-flex flex-row align-items-end justify-content-start">
+	          <div class="player_image"><img src="{{ url_for('static', filename='images/julienP.jpg')}}" alt=""></div>
+
+	        </div>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+
+	<div id='4' class="player" style="display:None;">
+		<div id="joueur" class="container">
+			<div class="row">
+				<div class="col-xl-6">
+					<div class="player_content">
+						<div class="section_title_container">
+							<div class="section_title"><h1>Un joueur au hasard</h1></div>
+							<div class="section_subtitle">présentation</div>
+						</div>
+						<div class="player_name_container d-flex flex-row align-items-end justify-content-start">
+							<div class="player_num">9</div>
+							<div class="player_name">Gaël Grand</div>
+						</div>
+						<div class="player_text">
+							<p>Gael est néé en 2001. Il effectue une L1-SVT à l'université Bretagne Sud sur Vannes, et joue au PARC depuis début septembre 2019. Il à vécu toute sa vie à Madrid. Il joue au rugby depuis ses 5 ans au Tasman Rugby Boadilla, comme 9 mais aussi 10. (champion d'Espagne avec la sélection de Madrid, en rugby XV et VII.)
+								 </p>
+							<p>Depuis que qu'il est au PARC, il apprécie le niveau de rugby mais aussi la très bonne ambiance !</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-xl-6">
+					<div class="player_images d-flex flex-row align-items-end justify-content-start">
+						<div class="player_image"><img src="{{ url_for('static', filename='images/GaelG.jpg')}}" alt=""></div>
+
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div id='5' class="player" style="display:None;">
+		<div id="joueur" class="container">
+			<div class="row">
+				<div class="col-xl-6">
+					<div class="player_content">
+						<div class="section_title_container">
+							<div class="section_title"><h1>Un joueur au hasard</h1></div>
+							<div class="section_subtitle">présentation</div>
+						</div>
+						<div class="player_name_container d-flex flex-row align-items-end justify-content-start">
+							<div class="player_num">6</div>
+							<div class="player_name">Théo Durand </div>
+						</div>
+						<div class="player_text">
+							<p>Néé en 1998 Théo a commencé le rugby à l'âge de 5 ans dans le club d'Hennebont
+								puis au SKRANK. Il a repris suite à une blessure en cadet avec l'équipe de Lorient jusqu'en junior.
+								Après une année de césure rugbystique, il a repris au PARC en sébior en 2016.
+								12/13 de formation il évolue désormais au poste de 3eme ligne.</p>
+							<p>Diplomé d'un BAC S - Il étudie à l'école d'ingénieur ICAM de Vannes.</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-xl-6">
+					<div class="player_images d-flex flex-row align-items-end justify-content-start">
+						<div class="player_image"><img src="{{ url_for('static', filename='images/TheoD.jpg')}}" alt=""></div>
+
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div id='6' class="player" style="display:None;">
+		<div id="joueur" class="container">
+			<div class="row">
+				<div class="col-xl-6">
+					<div class="player_content">
+						<div class="section_title_container">
+							<div class="section_title"><h1>Un joueur au hasard</h1></div>
+							<div class="section_subtitle">présentation</div>
+						</div>
+						<div class="player_name_container d-flex flex-row align-items-end justify-content-start">
+							<div class="player_num"></div>
+							<div class="player_name">Antoine Bierent </div>
+						</div>
+						<div class="player_text">
+							<p>Néé en 1998 Antoine a commencé le rugby a l'age de 6 ans. Il joue9 ans à Hennebont, puis 6 ans à Vannes
+								avec qui il est champion de France en 2016, 2 année espoir à vannes.
+								A Auray depuis 2018.
+								</p>
+							<p>Actuellement en 3ème année STAPS à Arradon.</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-xl-6">
+					<div class="player_images d-flex flex-row align-items-end justify-content-start">
+						<div class="player_image"><img src="{{ url_for('static', filename='images/AntoineB.jpg')}}" alt=""></div>
+
+					</div>
+				</div>
+			</div>
+		</div>
 	</div>
 
 	<!-- News -->
