@@ -16,7 +16,7 @@
 
 				<!-- Slide -->
 				<div class="home_slide">
-					<div class="background_image" style="background-image:url(static/images/parclic.png)"></div>
+					<div class="background_image" style="background-image:url(static/images/parclic.jpg)"></div>
 					<div class="home_container">
 						<div class="container">
 							<div class="row">
@@ -46,7 +46,7 @@
 
 				<!-- Slide -->
 				<div class="home_slide">
-					<div class="background_image" style="background-image:url(static/images/parc3.png)"></div>
+					<div class="background_image" style="background-image:url(static/images/parc3.jpg)"></div>
 					<div class="home_container">
 						<div class="container">
 							<div class="row">
@@ -77,7 +77,7 @@
 
 				<!-- Slide -->
 				<div class="home_slide">
-					<div class="background_image" style="background-image:url(static/images/Parc_ben.png)"></div>
+					<div class="background_image" style="background-image:url(static/images/Parc_ben.jpg)"></div>
 					<div class="home_container">
 						<div class="container">
 							<div class="row">
@@ -378,7 +378,7 @@
 
 		<script type="text/javascript" language="JavaScript">
 
-		randomNumber = Math.floor(Math.random()*6+1);
+		randomNumber = Math.floor(Math.random()*7+1);
 
 		window.onload = function() {
 		        document.getElementById(randomNumber.toString()).style.display = "block";
@@ -561,6 +561,37 @@
 				<div class="col-xl-6">
 					<div class="player_images d-flex flex-row align-items-end justify-content-start">
 						<div class="player_image"><img src="{{ url_for('static', filename='images/AntoineB.jpg')}}" alt=""></div>
+
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div id='7' class="player" style="display:None;">
+		<div id="joueur" class="container">
+			<div class="row">
+				<div class="col-xl-6">
+					<div class="player_content">
+						<div class="section_title_container">
+							<div class="section_title"><h1>Un(e) joueur(euse) au hasard</h1></div>
+							<div class="section_subtitle">présentation</div>
+						</div>
+						<div class="player_name_container d-flex flex-row align-items-end justify-content-start">
+							<div class="player_num">13</div>
+							<div class="player_name">Johann Kerrand </div>
+						</div>
+						<div class="player_text">
+							<p>Johann est néé à Vannes en 1990, après 10 à l'école de rugby de Grand-Champs il jouera 14 ans au RCV de l'école de rugby à la fédéral1/NationnalB.
+								Il a été sélectionné dans les équipes du morbihan, de bretagne à 15 et à 7. Il a également joué un match contre l'Irlande avec le Top 100 nationnal des moins de 17 ans.
+								</p>
+							<p>Johann est maintenant responsable E commerce et chargé de communication chez TID-Inox</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-xl-6">
+					<div class="player_images d-flex flex-row align-items-end justify-content-start">
+						<div class="player_image"><img src="{{ url_for('static', filename='images/JohK.png')}}" alt=""></div>
 
 					</div>
 				</div>

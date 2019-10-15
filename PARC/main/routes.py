@@ -93,6 +93,10 @@ def sponsors():
 def equipements():
     return render_template('equipements.html')
 
+@main.route("/medical")
+def medical():
+    return render_template('medical.html')
+
 
 # creer un post
 
