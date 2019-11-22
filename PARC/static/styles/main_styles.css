@@ -1307,6 +1307,15 @@ section
 	font-weight: 500;
 	line-height: 0.75;
 }
+
+.milestone_blabla
+{
+	font-size: 48px;
+	color: #D82C76;
+	font-weight: 500;
+	line-height: 0.75;
+}
+
 .milestone_title
 {
 	font-size: 18px;

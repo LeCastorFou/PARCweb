@@ -163,7 +163,7 @@
 
 
 							<div class="result_text">
-								<p>Le Pays d'Auray rugby club a été fondé en 1972 et est actuellement le deuxième club du morbihan. Le club est fort de plus de 300 licenciée dont une grande partie (165) ont moins de 18 ans, ce qui fait du PARC un vrai club formateur.
+								<p>Le Pays d'Auray rugby club a été fondé en 1972 et est actuellement le deuxième club du morbihan. Le club est fort de plus de 300 licenciés dont une grande partie (165) ont moins de 18 ans, ce qui fait du PARC un vrai club formateur.
 								L'équipe sénior A et B évolue en troisième division de fédérale tandis que l'équipe C participe au championnat térritorial breton. Le PARC c'est aussi une équipe féminines les 'breizhbarian' avec plus de 40 joueuses. Soucieux de la maitrise de la formation, de la préservation
 								de sa culture et de ses traditions, le PARC déploie son projet
 								sportif au travers :
@@ -176,6 +176,46 @@
 
 					</div>
 				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Milestones -->
+
+	<div class="milestones">
+		<div class="parallax_background parallax-window" data-parallax="scroll" data-image-src="{{ url_for('static', filename='images/milestones.jpg')}}" data-speed="0.8"></div>
+		<div class="container">
+			<div class="row milestones_row">
+
+				<!-- Milestone -->
+				<div class=" milestone_col">
+					<div class="milestone d-flex flex-row align-items-start justify-content-start">
+						<div class="milestone_content">
+							<div class="milestone_blabla" > Respect,</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- Milestone -->
+				<div class=" milestone_col">
+					<div class="milestone d-flex flex-row align-items-start justify-content-start">
+						<div class="milestone_content">
+							<div class="milestone_blabla" > Intégrité, Transparence </div>
+						</div>
+					</div>
+				</div>
+
+
+
+				<!-- Milestone -->
+				<div class=" milestone_col">
+					<div class="milestone d-flex flex-row align-items-start justify-content-start">
+						<div class="milestone_content">
+							<div class="milestone_blabla" > Exigence et Plaisir</div>
+						</div>
+					</div>
+				</div>
+
 			</div>
 		</div>
 	</div>
@@ -248,7 +288,7 @@
 						<div class="team_small_image"><a href="#"><img src="{{ url_for('static', filename='images/regis.jpg')}}" alt=""></a><div>C</div></div>
 						<div class="team_small_content text-sm-center">
 							<div class="team_small_name"><a href="#">Regis Loubery</a></div>
-							<div class="team_small_title">Coach senior (avant)</div>
+							<div class="team_small_title">Coach senior</div>
 						</div>
 					</div>
 				</div>
@@ -278,6 +318,17 @@
 				<!-- Team Item -->
 				<div class="col-xl-2 col-md-4 col-sm-6">
 					<div class="team_small d-flex flex-sm-column flex-row align-items-center justify-content-sm-center justify-content-start">
+						<div class="team_small_image"><a href="#"><img src="{{ url_for('static', filename='images/PieterG.jpg')}}" alt=""></a><div>C</div></div>
+						<div class="team_small_content text-sm-center">
+							<div class="team_small_name"><a href="#"> Pieter Grobler </a></div>
+							<div class="team_small_title">Coach senior (avant)</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- Team Item -->
+				<div class="col-xl-2 col-md-4 col-sm-6">
+					<div class="team_small d-flex flex-sm-column flex-row align-items-center justify-content-sm-center justify-content-start">
 						<div class="team_small_image"><a href="#"><img src="{{ url_for('static', filename='images/people1.jpg')}}" alt=""></a><div>C</div></div>
 						<div class="team_small_content text-sm-center">
 							<div class="team_small_name"><a href="#">Michel Grzeskowiak</a></div>
@@ -297,16 +348,6 @@
 					</div>
 				</div>
 
-				<!-- Team Item -->
-				<div class="col-xl-2 col-md-4 col-sm-6">
-					<div class="team_small d-flex flex-sm-column flex-row align-items-center justify-content-sm-center justify-content-start">
-						<div class="team_small_image"><a href="#"><img src="{{ url_for('static', filename='images/people3.jpg')}}" alt=""></a><div>C</div></div>
-						<div class="team_small_content text-sm-center">
-							<div class="team_small_name"><a href="#">Philippe Vanier</a></div>
-							<div class="team_small_title">Ecole de rugby</div>
-						</div>
-					</div>
-				</div>
 
 			</div>
 
@@ -337,9 +378,9 @@
 				<!-- Team Item -->
 				<div class="col-xl-2 col-md-4 col-sm-6">
 					<div class="team_small d-flex flex-sm-column flex-row align-items-center justify-content-sm-center justify-content-start">
-						<div class="team_small_image"><a href="#"><img src="{{ url_for('static', filename='images/coach.jpg')}}" alt=""></a><div>C</div></div>
+						<div class="team_small_image"><a href="#"><img src="{{ url_for('static', filename='images/Matilin.jpg')}}" alt=""></a><div>C</div></div>
 						<div class="team_small_content text-sm-center">
-							<div class="team_small_name"><a href="#">? ? </a></div>
+							<div class="team_small_name"><a href="#"> Matilin Mahé </a></div>
 							<div class="team_small_title">Coach U16</div>
 						</div>
 					</div>
@@ -367,13 +408,15 @@
 					</div>
 				</div>
 
+
+
 				<!-- Team Item -->
 				<div class="col-xl-2 col-md-4 col-sm-6">
 					<div class="team_small d-flex flex-sm-column flex-row align-items-center justify-content-sm-center justify-content-start">
-						<div class="team_small_image"><a href="#"><img src="{{ url_for('static', filename='images/pp.jpg')}}" alt=""></a><div>C</div></div>
+						<div class="team_small_image"><a href="#"><img src="{{ url_for('static', filename='images/people3.jpg')}}" alt=""></a><div>C</div></div>
 						<div class="team_small_content text-sm-center">
-							<div class="team_small_name"><a href="#"> ?? </a></div>
-							<div class="team_small_title">Coach</div>
+							<div class="team_small_name"><a href="#">Philippe Vanier</a></div>
+							<div class="team_small_title">Ecole de rugby</div>
 						</div>
 					</div>
 				</div>
