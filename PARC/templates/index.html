@@ -972,8 +972,8 @@
 							<div class="news_post_date">
 								<a href="#">
 									<div class="d-flex flex-column align-items-center justify-content-center">
-										<div>10</div>
-										<div>sept</div>
+										<div>{{post.date_posted.day}}</div>
+										<div>{{month[post.date_posted.strftime("%B")]  }}</div>
 									</div>
 								</a>
 							</div>

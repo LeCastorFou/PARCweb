@@ -64,7 +64,8 @@ def requires_auth(f):
 def home():
     posts = Post.query.all()
     posts = reversed(posts[-3:])
-    return render_template('index.html',posts=posts)
+    month = {'January':'Jan','February':'Fev','March':'Mar','April':'Avr','May':'Mai','June':'Juin','July':'Juil','August':'Aout','September':'Sept','October':'Oct','November':'Nov','December':'Dec'}
+    return render_template('index.html',posts=posts, month =month)
 
 @main.route("/senior")
 def senior():
