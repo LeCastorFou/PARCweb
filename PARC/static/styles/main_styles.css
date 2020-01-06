@@ -746,6 +746,26 @@ section
 	  margin-top: 200px;
 	}
 }
+
+@media only screen and (min-width: 1000px)
+{
+	.home_mobile
+	{
+		display: none;
+		height: 100vh;
+	}
+}
+
+@media only screen and (max-width: 1000px)
+{
+	.home_mobile
+	{
+height: 100vh;
+
+	}
+}
+
+
 .home_slider_container
 {
 	width: 100%;
