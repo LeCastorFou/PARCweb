@@ -120,22 +120,11 @@ def new_post():
 
 
 # Delete post
-@main.route("/post/<int:post_id>/delete", methods=['POST'])
+@main.route("/post/<int:post_id>/delete", methods=['GET','POST'])
 def delete_post(post_id):
     post = Post.query.get_or_404(post_id)
     db.session.delete(post)
     db.session.commit()
-    flash('Post effacé', 'success')
     posts = Post.query.all()
-    form = PostForm()
-    if form.validate_on_submit():
-        if form.picture.data:
-            picture_file = save_picture(form.picture.data)
-
-        post = Post(title=form.title.data, content=form.content.data, image_file = picture_file)
-
-        db.session.add(post)
-        db.session.commit()
-        flash('Post créé','success')
-        return redirect(url_for('main.blog'))
-    return render_template('create_post.html', title = 'Nouveau Post', posts = posts,form =form,legend = 'Nouveau Post')
+    return redirect(url_for('main.new_post'))
+        

@@ -92,31 +92,9 @@
 
   <div>
     <!-- modal form bootstrap asking if user is sure to delete post see https://getbootstrap.com/docs/4.1/components/modal/-->
-    {{ post.title }} le {{ post.date_posted.strftime('%d/%m/%Y') }} <button type="button" class="btn btn-danger btn-sm m-1" data-toggle="modal" data-target="#deleteModal"><i class="far fa-trash-alt"></i>Effacer</button>
+    {{ post.title }} -- {{ post.id }} le {{ post.date_posted.strftime('%d/%m/%Y') }}<a href="{{url_for('main.delete_post', post_id = post.id)}}"> <button type="button" class="btn btn-danger btn-sm m-1"><i class="far fa-trash-alt"></i>Effacer</button></a>
   </div>
 
-    <!-- Modal -->
-    <div class="modal fade" id="deleteModal" tabindex="-1" role="dialog" aria-labelledby="deleteModalLabel" aria-hidden="true">
-      <div class="modal-dialog" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="deleteModalLabel">Effacer le Post ?</h5>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
-          <div class="modal-body">
-            ...
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-dismiss="modal">Fermer</button>
-            <form action = "{{url_for('main.delete_post', post_id = post.id)}}" method = "POST">
-              <input class="btn btn-danger" type="submit" value="Effacer">
-            </form>
-          </div>
-        </div>
-      </div>
-    </div>
   {%endfor%}
 </div>
 {% endblock content %}
