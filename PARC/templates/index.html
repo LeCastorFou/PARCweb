@@ -1042,10 +1042,33 @@
 		<div class="container">
 			<div class="row">
 				<div class="col">
-					<div class="cta_content d-flex flex-md-row flex-column align-items-md-center align-items-start justify-content-start">
-						<div class="cta_text">Vous voulez rejoindre <span>le PARC ?</span></div>
-						<div class="cta_button button ml-md-auto"><a href="#">Cliquez ici</a></div>
-					</div>
+					<h3 style="color:#004376"> S'incrire à la newsletter</h3>
+					<form method="POST" action="" enctype="multipart/form-data">
+							{{ form.hidden_tag() }}
+							<!-- les class sont pour le bootstrap -->
+							<fieldset>
+									<legend class = 'border-bottom mb-4'>{{ legend }}</legend>
+
+									<div class='form-group'>
+										{{ form.mail.label(class="form-control-label",style="color:#004376")}}
+										<!-- On ajoute une class error de bootstrap et on les checks -->
+											{% if form.mail.errors %}
+												{{ form.mail(class="form-control  is-invalid")}}
+												<div class="invalid-feedback">
+													{% for error in form.mail.errors %}
+														<span>{{error}}</span>
+													{% endfor%}
+												</div>
+												{% else %}
+													{{ form.mail(class="form-control",style="color:#004376")}}
+											{% endif%}
+									</div>
+
+							</fieldset>
+							<div class='form-group'>
+								{{ form.submit(class = "btn btn-primary")}}
+							</div>
+					</form>
 				</div>
 			</div>
 		</div>

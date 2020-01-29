@@ -5,7 +5,7 @@ from PARC.main.utils import save_picture
 
 from flask import render_template, url_for,flash, redirect, request, abort
 from PARC import db, mail
-from PARC.main.forms import  PostForm, AdminForm
+from PARC.main.forms import  PostForm, AdminForm, NewsForm
 from PARC.models import Post
 
 from werkzeug import secure_filename
@@ -59,13 +59,18 @@ def requires_auth(f):
         return f(*args, **kwargs)
     return decorated
 
-@main.route("/")
-@main.route("/home")
+@main.route("/",  methods=['GET','POST'])
+@main.route("/home",  methods=['GET','POST'])
 def home():
+    form = NewsForm()
+    if form.validate_on_submit():
+        with open('PARC/static/List_Mail.csv','a') as fd:
+            fd.write(form.mail.data+"\n")
+        return redirect(url_for('main.home'))
     posts = Post.query.all()
     posts = reversed(posts[-3:])
     month = {'January':'Jan','February':'Fev','March':'Mar','April':'Avr','May':'Mai','June':'Juin','July':'Juil','August':'Aout','September':'Sept','October':'Oct','November':'Nov','December':'Dec'}
-    return render_template('index.html',posts=posts, month =month)
+    return render_template('index.html',posts=posts, month =month, form=form)
 
 @main.route("/senior")
 def senior():
@@ -109,12 +114,16 @@ def new_post():
     if form.validate_on_submit():
         if form.picture.data:
             picture_file = save_picture(form.picture.data)
-
         post = Post(title=form.title.data, content=form.content.data, image_file = picture_file)
-
         db.session.add(post)
         db.session.commit()
         flash('Post créé','success')
+        Mails = pd.read_csv('PARC/static/List_Mail.csv',sep=';')
+        Mails = set(list(Mails[Mails.columns[0]]))
+        #Mails = ['valent1lefranc@gmail.com'] #tests
+        msg = Message('PARC News' + ' : ' +form.title.data,sender='aurayrugbynews@gmail.com',recipients= Mails)
+        msg.body = form.content.data
+        mail.send(msg)
         return redirect(url_for('main.blog'))
     return render_template('create_post.html', title = 'Nouveau Post', posts = posts,form =form,legend = 'Nouveau Post')
 
@@ -127,4 +136,3 @@ def delete_post(post_id):
     db.session.commit()
     posts = Post.query.all()
     return redirect(url_for('main.new_post'))
-        

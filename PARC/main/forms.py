@@ -20,3 +20,7 @@ class AdminForm(FlaskForm):
     User = StringField('Titre', validators=[DataRequired()])
     mdp = StringField('Contenu', validators=[DataRequired()])
     submit = SubmitField('Publier')
+
+class NewsForm(FlaskForm):
+    mail = StringField('e-mail', validators=[DataRequired()])
+    submit = SubmitField("S'inscrire !")
