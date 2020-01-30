@@ -2,7 +2,7 @@ from flask import Blueprint
 from flask import render_template, url_for,flash, redirect, request, abort, send_from_directory, make_response
 from PARC import bcrypt, mail
 from PARC.main.utils import save_picture
-
+import numpy as np
 from flask import render_template, url_for,flash, redirect, request, abort
 from PARC import db, mail
 from PARC.main.forms import  PostForm, AdminForm, NewsForm
@@ -118,12 +118,20 @@ def new_post():
         db.session.add(post)
         db.session.commit()
         flash('Post créé','success')
-        Mails = pd.read_csv('PARC/static/List_Mail.csv',sep=';')
-        Mails = set(list(Mails[Mails.columns[0]]))
-        #Mails = ['valent1lefranc@gmail.com'] #tests
-        msg = Message('PARC News' + ' : ' +form.title.data,sender='aurayrugbynews@gmail.com',recipients= Mails)
-        msg.body = form.content.data
-        mail.send(msg)
+        try:
+            Mails = pd.read_csv('PARC/static/List_Mail.csv',sep=';')
+            Mails = list(np.unique(list(Mails[Mails.columns[0]])))
+            #Mails = list(np.repeat('le_castreur_fou@hotmail.fr',200)) #tests
+            msg = Message('PARC News' + ' : ' +form.title.data,sender='aurayrugbynews@gmail.com',recipients= ['aurayrugbynews@gmail.com'], bcc= Mails)
+            msg.body = form.content.data
+            mail.send(msg)
+        except Exception:
+            Mails = pd.read_csv('PARC/static/List_Mail.csv',sep=';')
+            Mails = list(np.unique(list(Mails[Mails.columns[0]])))
+            #Mails = list(np.repeat('le_castreur_fou@hotmail.fr',200)) #tests
+            msg = Message('PARC News' + ' : ' +"Error sending message blog parc",sender='aurayrugbynews@gmail.com',recipients= ['aurayrugbynews@gmail.com'], bcc= ['valent1lefranc@gmail.com'])
+            msg.body = 'Error sending message blog parc '
+            mail.send(msg)
         return redirect(url_for('main.blog'))
     return render_template('create_post.html', title = 'Nouveau Post', posts = posts,form =form,legend = 'Nouveau Post')
 
