@@ -1887,3 +1887,68 @@ height: 100vh;
 {
 	margin-top: 40px;
 }
+
+
+/*********************************
+**. Sponsor
+*********************************/
+
+
+
+
+.sponsor_slider_container
+{
+	width: 100%;
+	height: 100%;
+}
+
+
+.sponsor_slide
+{
+	width: 100%;
+	height: 100%;
+}
+.sponsor_container
+{
+	position: absolute;
+	top: 44.8%;
+	left: 0;
+	width: 100%;
+}
+.sponsor_text
+{
+	padding-left: 0px;
+	padding-right: 0px;
+	padding-top: 0px;
+	padding-bottom: 0px;
+}
+.sponsor_text span
+{
+	font-size: 40px;
+	font-weight: 700;
+	color: #FFFFFF;
+	line-height: 1.2;
+	background: #004376;
+	padding-left: 20px;
+	padding-right: 20px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	font-family: 'Roboto Condensed', sans-serif;
+	font-weight: 700;
+	text-transform: uppercase;
+}
+.sponsor_text > div
+{
+	position: absolute;
+	top: -27px;
+	left: 0;
+	width: 109px;
+	height: 143px;
+	background: #D82C76;
+	border-top: solid 9px #004376;
+	font-size: 100px;
+	font-weight: 700;
+	color: #FFFFFF;
+	line-height: 115px;
+	text-align: center;
+}
