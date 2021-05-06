@@ -45,7 +45,7 @@ filelock==2.0.12
 Flask==0.12.2
 Flask-Bcrypt==0.7.1
 Flask-Bootstrap==3.3.7.1
-Flask-Cors==3.0.3
+Flask-Cors==3.0.9
 Flask-Datepicker==0.12
 Flask-DebugToolbar==0.10.1
 Flask-Login==0.4.1
